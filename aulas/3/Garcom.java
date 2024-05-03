@@ -3,11 +3,12 @@ import java.util.Scanner;
 public class Garcom {
 	static int quebrados(int numBan, Scanner sc) {
 		int totalCoposQuebrados = 0;
-		System.out.println("Insira neste formato: (x copos-y latas)");
+		System.out.println("Insira no formato formato (x y)");
+		
 		for (int i = 1; i <= numBan; i++) {
 			System.out.print(i+" bandeja: ");
 			String conteudo = sc.nextLine();
-			String[] band = conteudo.split("-");
+			String[] band = conteudo.split(" ");
 			int latas = Integer.parseInt(band[0]);
             int copos = Integer.parseInt(band[1]);
             
@@ -26,8 +27,6 @@ public class Garcom {
 		sc.nextLine();
 		
 		System.out.println("Total de quebrados: " + quebrados(numBan, sc));
-		
-		
 		
 	}
 }
