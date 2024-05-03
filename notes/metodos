@@ -1,0 +1,32 @@
+METODO STATIC
+
+Pertence a classe em si, nao pode acessar outros membros nao estaticos da classe, pode ser acessivel a outras classes se definido como 'public'.
+
+Ex:
+public class MinhaClasse {
+    public static void metodoEstatico() {
+        System.out.println("Este eh um método estatico e publico.");
+    }
+
+    public static void main(String[] args) {
+        MinhaClasse.metodoEstatico(); // Chamando diretamente sem criar um objeto
+    }
+}
+
+
+METODO NAO STATIC
+
+Precisa ser instanciado em um objeto para ser chamado, pode acessar membros 'static' e tambem manipular outros objetos.
+
+Ex:
+public class MinhaClasse {
+    public void metodoNaoEstatico() {
+        System.out.println("Este eh um metodo nao estatico.");
+    }
+
+    public static void main(String[] args) {
+        MinhaClasse objeto = new MinhaClasse(); // Criacao e instanciacao do objeto
+        objeto.metodoNaoEstatico(); // Chamando o metodo atraves de um objeto
+    }
+}
+
