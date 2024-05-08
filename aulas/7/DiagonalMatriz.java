@@ -16,7 +16,7 @@ public class DiagonalMatriz {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				mat[i][j] = rng.nextInt(21) - 10;
-				System.out.print(mat[i][j] + "    ");
+				System.out.print(mat[i][j] + "   ");
 				if (i == j) {
 					diag[i] = mat[i][j];
 				}
