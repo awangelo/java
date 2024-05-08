@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Atv2 {
+public class Atv3 {
 	static boolean ehPrimo(int n) {
         if (n <= 1) {
             return false;
