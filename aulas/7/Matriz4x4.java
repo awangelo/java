@@ -39,11 +39,7 @@ public class Matriz4x4 {
 	
 	static void diagonalPrincipal(double[][] matriz) {
 		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				if (i == j) {
-					System.out.printf("%.1f   ", matriz[i][j]);
-				}
-			}
+			System.out.printf("%.1f   ", matriz[i][i]);
 		}
     }
     
