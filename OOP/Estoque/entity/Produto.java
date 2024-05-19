@@ -1,25 +1,25 @@
 package entity;
 
-public class Produto {
-    private String nome;
+public abstract class Produto {
     private int id;
+    private String nome;
     private int quantidade;
     private double preco;
 
-    public Produto(String nome, int id, int quantidade, double preco) { // construtor do produto
-        this.nome = nome;
+    public Produto(int id, String nome, int quantidade, double preco) { // construtor do produto
         this.id = id;
+        this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
     }
 
-    // getters para ver os atributos privados
-    public String getNome() {
-        return nome;
-    }
-
+    // getters e setters para os atributos privados
     public int getId() {
         return id;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public int getQuantidade() {
@@ -38,7 +38,5 @@ public class Produto {
         this.preco = preco;
     }
 
-    public String getDesc() {
-        return "Produto: " + nome + ", ID: " + id + ", Quantidade: " + quantidade + ", Preço: " + preco;
-    }
+    public abstract String getDesc(); // nao vai ser chamado aqui
 }
